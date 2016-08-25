@@ -12,16 +12,16 @@ more memory allocated to the process, the better_).
 
 Most times it is better to leave the default `JAVA_OPTS` as they are,
 and use the `ES_JAVA_OPTS` environment variable in order to set / change
-JVM settings or arguments.
+JVM settings or arguments. (but how?)
 
 The `ES_HEAP_SIZE` environment variable allows to set the heap memory
 that will be allocated to elasticsearch java process. It will allocate
 the same value to both min and max values, though those can be set
 explicitly (not recommended) by setting `ES_MIN_MEM` (defaults to
-`256m`), and `ES_MAX_MEM` (defaults to `1g`).
+`256m`), and `ES_MAX_MEM` (defaults to `1g`). (but how?)
 
 It is recommended to set the min and max memory to the same value, and
-enable <<setup-configuration-memory,`mlockall`>>.
+enable <<setup-configuration-memory,`mlockall`>>. (again, how?)
 
 [float]
 [[system]]
@@ -35,7 +35,7 @@ Make sure to increase the number of open files descriptors on the
 machine (or for the user running elasticsearch). Setting it to 32k or
 even 64k is recommended.
 
-In order to test how many open files the process can open, start it with
+In order to test how many open files the process (which process?) can open, start it with
 `-Des.max-open-files` set to `true`. This will print the number of open
 files the process can open on startup.
 
